@@ -5,7 +5,7 @@ export default { name: "App" };
 <script setup>
 import { ref, computed } from "vue";
 import NotFound from "./NotFound.vue";
-import Home from "./components/HelloWorld.vue";
+import Home from "./components/home";
 import BasicExample from "./components/BasicExample.vue";
 
 const routes = {
