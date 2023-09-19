@@ -9,7 +9,7 @@ import { ref, watchEffect, onMounted } from "vue";
 import axios from "axios";
 
 const API_URL = "https://api.publicapis.org/entries";
-const dataFetch = ref(null);
+const dataFetch = ref([]);
 const dataAxios = ref([]);
 
 onMounted(() => {

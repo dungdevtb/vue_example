@@ -1,10 +1,28 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import Antd from "ant-design-vue";
-// import "ant-design-vue/dist/antd.css";
+import "./index.scss";
 
-createApp(App).mount("#app");
+//import fontawesome
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faUser,
+  faClock,
+  faMessage,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faUser, faClock, faMessage, faXmark);
 
-const app = createApp();
+// import antdv
+import { InputNumber, Modal, Button } from "ant-design-vue";
+
+const app = createApp(App);
+app.component("font-awesome-icon", FontAwesomeIcon);
 app.config.productionTip = false;
-app.use(Antd);
+app.use(InputNumber);
+app.use(Modal);
+app.use(Button);
+
+app.mount("#app");
+
+// createApp(App).mount("#app");
